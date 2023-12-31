@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <style>
+        body {
+            font-family: 'Monotype Corsiva', cursive;
+            text-align: center;
+            background-color: #e6e6fa; /* Lilac background */
+            color: black;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #love-message {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            font-size: 48px;
+            display: none;
+        }
+
+        #heart {
+            font-size: 72px;
+            color: red;
+            animation: heartbeat 1s infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="love-message">
+        I Love You So Much Archisman ~ <br> From Your Coder GF Taniyaa
+        <div id="heart">&#10084;</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loveMessage = document.getElementById("love-message");
+
+            // Show the love message with animation
+            loveMessage.style.display = "block";
+            loveMessage.style.animation = "slide-in 2s ease-out";
+
+            // Delay the heartbeat animation
+            setTimeout(() => {
+                const heart = document.getElementById("heart");
+                heart.style.animation = "heartbeat 1s infinite";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
